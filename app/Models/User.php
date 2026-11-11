@@ -46,4 +46,12 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    /**
+     * Get the informations authored by the user.
+     */
+    public function informations()
+    {
+        return $this->hasMany(Information::class);
+    }
 }
